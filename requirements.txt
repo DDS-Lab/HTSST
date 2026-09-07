@@ -1,0 +1,31 @@
+# HTSST Bridge Seismic Vulnerability Assessment
+# Developed with Python 3.14, PyTorch 2.13, CUDA 13.2
+#
+# Install with: pip install -r requirements.txt
+# GPU support (optional): replace torch with the appropriate CUDA build
+#   See: https://pytorch.org/get-started/locally/
+#
+# Verified against all 4 notebooks: htsst_ssl_pipeline, htsst_notext,
+# ft_transformer_baseline, scarf_baseline
+
+# ── Core deep learning ───────────────────────────────────────────────────────
+torch>=2.0.0
+
+# ── Transformers / tokenizer ─────────────────────────────────────────────────
+# bert-base-uncased tokenizer vocabulary used for text token IDs.
+# FT-Transformer baseline additionally loads the full BertModel for
+# frozen mean-pooled embeddings before PCA projection.
+# HTSST trains its own embeddings from scratch — no pretrained weights loaded.
+transformers>=4.30.0
+
+# ── Tabular / numerical ──────────────────────────────────────────────────────
+scikit-learn>=1.2.0    # StratifiedKFold, train_test_split, PCA, r2_score
+pandas>=2.0.0          # CSV loading, index alignment
+numpy>=2.0.0          # array ops, percentile bins, concatenation
+
+# ── Visualisation ────────────────────────────────────────────────────────────
+matplotlib>=3.7.0      # prediction interval plots, CAP curves, residual plots
+
+# ── Notebook environment ─────────────────────────────────────────────────────
+jupyter>=1.0.0
+ipykernel>=6.0.0
