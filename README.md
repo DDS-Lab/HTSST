@@ -14,7 +14,7 @@ Official codebase for the paper:
 
 This repository provides the model implementations and public-source feature data for HTSST, a self-supervised transformer architecture for label-scarce heterogeneous tabular data. HTSST introduces a *trinity embedding* that tokenizes each tabular feature as the sum of a value projection, a learned feature identity embedding, and a modality type embedding, enabling a single transformer encoder to jointly process numerical, categorical, and text features.
 
-The case study predicts the **Shear Critical Condition Index (SCCI)** — a measure of bridge column susceptibility to seismic shear failure — using 4,914 unlabeled bridge records from the National Bridge Inventory and supplementary geospatial datasets, with only 370 labeled targets available for fine-tuning.
+The case study predicts the **Shear Critical Column Index (SCCI)** — a measure of bridge column susceptibility to seismic shear failure — using 4,914 unlabeled bridge records from the National Bridge Inventory and supplementary geospatial datasets, with only 370 labeled targets available for fine-tuning.
 
 ---
 
